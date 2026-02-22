@@ -1,0 +1,5 @@
+{
+  "name": "Ghibli Guardians",
+  "description": "A Studio Ghibli inspired safety companion for women, providing risk assessment and emergency check-ins.",
+  "requestFramePermissions": ["geolocation"]
+}

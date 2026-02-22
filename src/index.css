@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: "Cormorant Garamond", serif;
+  --font-display: "Cormorant Garamond", serif;
+  
+  --color-earth-deep: #1a2e1a;
+  --color-earth-moss: #3a5a40;
+  --color-earth-sage: #a3b18a;
+  --color-earth-cream: #fefae0;
+  --color-earth-clay: #bc6c25;
+  --color-earth-bark: #283618;
+}
+
+@layer base {
+  body {
+    @apply bg-[#fdfcf0] min-h-screen text-earth-bark font-sans antialiased;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(163, 177, 138, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(58, 90, 64, 0.1) 0px, transparent 50%);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-md border border-earth-sage/20 rounded-[2rem] shadow-sm;
+  }
+  
+  .glass-button {
+    @apply bg-white/80 backdrop-blur-sm border border-earth-sage/30 rounded-2xl px-6 py-3 font-semibold transition-all hover:bg-earth-cream/90 hover:border-earth-sage/50 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed text-earth-moss;
+  }
+
+  .primary-button {
+    @apply bg-earth-moss text-earth-cream border border-earth-deep/10 rounded-2xl px-6 py-3 font-bold transition-all hover:bg-earth-deep active:scale-95 shadow-md shadow-earth-moss/20 disabled:opacity-50;
+  }
+
+  .emergency-button {
+    @apply bg-rose-700 text-white border border-rose-900/10 rounded-2xl px-6 py-3 font-bold transition-all hover:bg-rose-800 active:scale-95 shadow-md shadow-rose-200/50;
+  }
+}
